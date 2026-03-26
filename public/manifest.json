@@ -1,0 +1,32 @@
+{
+    "short_name": "TrimmOS",
+    "name": "TrimmOS - Gestión para Barbería y Beauty",
+    "description": "El núcleo digital para la gestión de tu negocio de cuidado personal por Hesed Core.",
+    "icons": [
+        {
+        "src": "/icon-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+        },
+        {
+        "src": "/icon-512.png",
+        "type": "image/png",
+        "sizes": "512x512",
+        "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#0a0a0c",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#9333ea",
+    "shortcuts": [
+        {
+        "name": "Ver Agenda",
+        "short_name": "Agenda",
+        "description": "Revisar citas del día",
+        "url": "/#agenda",
+        "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+        }
+    ]
+}

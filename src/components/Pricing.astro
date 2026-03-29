@@ -1,20 +1,30 @@
 ---
 const plans = [
     {
-        name: "Trial",
+        name: "Lanzamiento",
         price: "Gratis",
-        duration: "7-14 días",
-        description: "Prueba el núcleo de TrimmOS y conoce el flujo del sistema.",
-        features: ["Agenda básica", "1 módulo a elegir", "Hasta 2 integrantes del equipo", "Explora el panel y flujo principal"],
-        buttonText: "Empezar prueba",
+        duration: "30 días",
+        description: "Prueba el núcleo operativo de TrimmOS y organiza tu agenda este mes.",
+        features: [
+            "Agenda inteligente 24/7", 
+            "Configuración de Servicios", 
+            "Soporte de Hesed Core", 
+            "Panel de Control básico"
+        ],
+        buttonText: "Obtener 30 Días Gratis",
         highlight: false
     },
     {
         name: "Essential",
         price: "$299",
         duration: "mes",
-        description: "Pensado para negocios que buscan orden y control total sin complicaciones.",
-        features: ["Módulo especializado", "Servicios y staff", "Agenda completa 24/7", "Gestión operativa del negocio"],
+        description: "La base sólida para negocios que buscan orden y control total.",
+        features: [
+            "Módulo Barber o Beauty", 
+            "Gestión de Staff y Horarios", 
+            "Agenda Completa e ilimitada", 
+            "Control operativo diario"
+        ],
         buttonText: "Activar Plan",
         highlight: false
     },
@@ -22,8 +32,13 @@ const plans = [
         name: "Pro",
         price: "$499",
         duration: "mes",
-        description: "La mejor opción para negocios que quieren operar en serio y crecer.",
-        features: ["Barber + Beauty", "Panel más completo", "Operación centralizada", "Base lista para reportes y crecimiento"],
+        description: "Para negocios híbridos que operan con múltiples servicios y alto flujo.",
+        features: [
+            "Acceso Multi-tenant", 
+            "Panel Administrativo Pro", 
+            "Gestión de múltiples sedes", 
+            "Base lista para reportes"
+        ],
         buttonText: "Activar Pro",
         highlight: true
     }
@@ -32,39 +47,53 @@ const plans = [
 
 <section id="pricing" class="py-24 bg-[#0a0a0c]">
     <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-white mb-4 italic">Planes a tu Medida</h2>
+            <p class="text-gray-400">Tecnología robusta diseñada por ingenieros para tu negocio.</p>
+        </div>
+
         <div class="grid md:grid-cols-3 gap-8 items-start">
             {plans.map((plan) => (
                 <div class={`relative p-8 rounded-3xl bg-[#16161a] border transition-all duration-300 hover:translate-y-[-8px] ${plan.highlight ? 'border-purple-600 shadow-[0_0_30px_rgba(147,51,234,0.2)] scale-105 z-10' : 'border-gray-800'}`}>
-                {plan.highlight && (
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
-                    Más recomendado
-                    </span>
-                )}
-                <h3 class="text-2xl font-bold mb-2">{plan.name}</h3>
-                <p class="text-gray-400 text-sm mb-6 h-10">{plan.description}</p>
-                <div class="mb-8">
-                    <span class="text-4xl font-extrabold">{plan.price}</span>
-                    <span class="text-gray-500 ml-1 italic">{plan.duration}</span>
-                </div>
-                <ul class="space-y-4 mb-8">
-                    {plan.features.map((feature) => (
-                    <li class="flex items-start text-sm text-gray-300 leading-tight">
-                        <svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                        {feature}
-                    </li>
-                    ))}
-                </ul>
-                <button class={`w-full py-4 rounded-2xl font-bold transition-all ${plan.highlight ? 'bg-purple-600 hover:bg-purple-700 shadow-lg shadow-purple-900/20' : 'bg-[#252529] hover:bg-[#323238]'}`}>
-                    {plan.buttonText}
-                </button>
+                    {plan.highlight && (
+                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">
+                            Más recomendado
+                        </span>
+                    )}
+                    
+                    <h3 class="text-2xl font-bold mb-2 text-white">{plan.name}</h3>
+                    <p class="text-gray-400 text-sm mb-6 h-12 leading-tight">{plan.description}</p>
+                    
+                    <div class="mb-8">
+                        <span class="text-4xl font-extrabold text-white">{plan.price}</span>
+                        <span class="text-gray-500 ml-1 italic">/ {plan.duration}</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8">
+                        {plan.features.map((feature) => (
+                            <li class="flex items-start text-sm text-gray-300 leading-tight">
+                                <svg class="w-5 h-5 text-purple-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                {feature}
+                            </li>
+                        ))}
+                    </ul>
+
+                    <a 
+                        href={`https://wa.me/528126076947?text=Hola%20Leonardo,%20me%20interesa%20el%20plan%20${plan.name}%20de%20TrimmOS`}
+                        target="_blank"
+                        class={`block text-center w-full py-4 rounded-2xl font-bold transition-all ${plan.highlight ? 'bg-purple-600 hover:bg-purple-700 text-white shadow-lg' : 'bg-[#252529] hover:bg-[#323238] text-white'}`}
+                    >
+                        {plan.buttonText}
+                    </a>
                 </div>
             ))}
         </div>
         
-        <!-- Frase de respaldo de ingeniería -->
         <div class="mt-16 text-center">
             <p class="text-gray-600 text-xs uppercase tracking-[0.3em]">
-                Soporte y Garantía Técnica por <span class="text-gray-400">Hesed Core</span>
+                Ingeniería con Propósito por <span class="text-gray-400">Hesed Core</span>
             </p>
         </div>
     </div>

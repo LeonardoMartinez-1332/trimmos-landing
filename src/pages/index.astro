@@ -1,12 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Pricing from '../components/Pricing.astro';
+import Gallery from '../components/Gallery.astro';
 ---
 
-<Layout>
+<Layout title="TrimmOS - El Núcleo Digital para tu Negocio">
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a 
-        href="https://wa.me/528126076947?text=Hola%20Hesed%20Core,%20me%20interesa%20el%20plan%20Pro%20de%20TrimmOS%20para%20mi%20negocio" 
+        href="https://wa.me/528126076947?text=Hola%20Leonardo!%20Vengo%20de%20la%20web%20y%20quiero%20mi%20mes%20gratis%20de%20TrimmOS%20para%20mi%20negocio" 
         target="_blank" 
         class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform group"
     >
@@ -14,138 +15,69 @@ import Pricing from '../components/Pricing.astro';
             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
         <span class="absolute right-full mr-4 bg-white text-black text-[10px] font-bold py-2 px-4 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-xl uppercase tracking-wider">
-            ¡Hablemos de TrimmOS!
+            ¡Obtén 30 días gratis!
         </span>
     </a>
 
     <!-- HERO SECTION -->
-    <main class="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute -top-1/4 -left-1/4 w-[600px] h-[600px] bg-purple-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-25 animate-blob-slow"></div>
-        <div class="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-blue-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-25 animate-blob-slow animation-delay-4000"></div>
+    <main class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#070709]">
+        <div class="absolute -top-1/4 -left-1/4 w-[600px] h-[600px] bg-purple-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-20"></div>
+        <div class="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-blue-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-20"></div>
 
         <div class="relative z-10 text-center px-4 max-w-5xl">
-            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 italic">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 italic text-white">
                 Trimm<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">OS</span>
             </h1>
-            <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight text-white">
-                El Núcleo Digital para tu <br/> 
-                <span class="text-gray-500 font-light">Barbería o Salón de Belleza</span>
+            <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight text-white min-h-[120px] md:min-h-[auto]">
+                Domina tu Negocio con <br/> 
+                <span id="dynamic-text" class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 font-light italic transition-all duration-500 inline-block">
+                    Identidad y Control Absoluto
+                </span>
             </h2>
             <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-3xl mx-auto">
-                Más que una agenda: <strong>TrimmOS</strong> es el aliado multiplataforma diseñado para barberos y estilistas profesionales. Muestra tu arte con un catálogo visual y gestiona tu negocio desde cualquier dispositivo.
+                No es solo una agenda. Es el motor multiplataforma que adapta su estilo a tu marca. <strong>Gestiona citas, staff y tu flujo operativo</strong> desde García para todo el mundo.
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
-                    Ver Planes
+                    Empezar mi Mes Gratis
                 </a>
-                <a href="#features" class="bg-[#16161a] border border-gray-800 hover:border-gray-600 text-white px-10 py-4 rounded-2xl font-bold transition-all">
-                    Descubrir módulos
+                <a href="#demo" class="bg-[#16161a] border border-gray-800 hover:border-gray-600 text-white px-10 py-4 rounded-2xl font-bold transition-all">
+                    Ver Personalización
                 </a>
             </div>
         </div>
     </main>
 
+    <!-- SECCIÓN DE PERSONALIZACIÓN VISUAL -->
+    <Gallery />
+
     <!-- FEATURES SECTION -->
-    <section id="features" class="py-20 bg-[#0a0a0c]">
+    <section id="features" class="py-20 bg-[#070709]">
         <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
             <div class="p-8 rounded-3xl bg-gradient-to-br from-[#16161a] to-[#0a0a0c] border border-gray-800 relative overflow-hidden group">
-                <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-purple-500 rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-2xl">📸</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Catálogo Visual</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Catálogo Visual Pro</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Permite que tus clientes elijan su estilo antes de llegar. Sube fotos de tus mejores degradados, tintes, peinados o diseños de uñas directamente a tu perfil.
+                        Próximamente: Podrás mostrar tu arte antes de la cita. Sube tus degradados y peinados para que tus clientes elijan su estilo ideal.
                     </p>
-                    <span class="inline-block mt-4 text-xs font-bold text-purple-400 uppercase tracking-widest">Próximamente</span>
+                    <span class="inline-block mt-4 text-xs font-bold text-purple-400 uppercase tracking-widest">En Desarrollo</span>
                 </div>
             </div>
 
             <div class="p-8 rounded-3xl bg-gradient-to-br from-[#16161a] to-[#0a0a0c] border border-gray-800 relative overflow-hidden group">
-                <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-pink-500 rounded-full blur-[80px] opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                 <div class="relative z-10">
                     <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6">
                         <span class="text-2xl">🛍️</span>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Venta de Productos</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Punto de Venta Integrado</h3>
                     <p class="text-gray-400 leading-relaxed text-sm">
-                        Incrementa tus ganancias vendiendo ceras, aceites y lociones desde la app. Gestión de inventario fácil y rápida para tu stock de belleza.
+                        Próximamente: Control de stock de ceras, aceites y productos. Un inventario inteligente que te avisará cuando necesites resurtir.
                     </p>
                     <span class="inline-block mt-4 text-xs font-bold text-pink-400 uppercase tracking-widest">Próximamente</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PWA INSTALL SECTION -->
-    <section class="py-16 bg-[#070709] border-y border-gray-900">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <div class="inline-block p-3 rounded-2xl bg-gradient-to-tr from-purple-500/20 to-blue-500/20 mb-6 border border-purple-500/30">
-                <span class="text-white font-bold text-xs tracking-widest uppercase">Multiplataforma Real</span>
-            </div>
-            <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 italic">
-                Lleva TrimmOS en tu Bolsillo
-            </h2>
-            <p class="text-gray-400 mb-12 max-w-2xl mx-auto text-sm leading-relaxed">
-                Sin descargas pesadas. Nuestra tecnología permite instalar <strong>TrimmOS</strong> en iPhone y Android directamente desde tu navegador.
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-                <!-- Tarjeta iOS Corregida -->
-                <div class="flex items-center space-x-4 p-6 bg-[#16161a] rounded-2xl border border-gray-800">
-                    <div class="w-12 h-12 flex items-center justify-center bg-white/5 rounded-xl flex-shrink-0">
-                        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 384 512">
-                            <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold mb-1">En iPhone (Safari)</h4>
-                        <p class="text-[11px] text-gray-500 leading-relaxed uppercase tracking-wider">
-                            Toca "Compartir" y luego "Agregar a Inicio"
-                        </p>
-                    </div>
-                </div>
-                <!-- Tarjeta Android Corregida -->
-                <div class="flex items-center space-x-4 p-6 bg-[#16161a] rounded-2xl border border-gray-800">
-                    <div class="w-12 h-12 flex items-center justify-center bg-blue-500/5 rounded-xl flex-shrink-0">
-                        <svg class="w-7 h-7 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M17.523 15.3414C17.062 15.3414 16.691 14.9704 16.691 14.5094C16.691 14.0484 17.062 13.6774 17.523 13.6774C17.984 13.6774 18.355 14.0484 18.355 14.5094C18.355 14.9704 17.984 15.3414 17.523 15.3414ZM6.477 15.3414C6.016 15.3414 5.645 14.9704 5.645 14.5094C5.645 14.0484 6.016 13.6774 6.477 13.6774C6.938 13.6774 7.309 14.0484 7.309 14.5094C7.309 14.9704 6.938 15.3414 6.477 15.3414ZM17.885 10.5144L19.967 6.9184C20.126 6.6434 20.033 6.2954 19.757 6.1384C19.482 6.0024 19.136 6.0744 18.977 6.3494L16.866 9.9984C15.424 9.3414 13.784 8.9704 12 8.9704C10.216 8.9704 8.576 9.3414 7.134 9.9984L5.023 6.3494C4.864 6.0744 4.518 6.0024 4.243 6.1384C3.967 6.2954 3.874 6.6434 4.033 6.9184L6.115 10.5144C2.716 12.3594 0.4 15.8674 0 19.9824H24C23.6 15.8674 21.284 12.3594 17.885 10.5144Z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold mb-1">En Android (Chrome)</h4>
-                        <p class="text-[11px] text-gray-500 leading-relaxed uppercase tracking-wider">
-                            Toca los tres puntos e "Instalar Aplicación"
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="py-24 bg-[#0a0a0c]">
-        <div class="max-w-4xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4 italic">Preguntas Frecuentes</h2>
-                <p class="text-gray-500 text-sm">Respaldo técnico por Hesed Core</p>
-            </div>
-
-            <div class="space-y-6">
-                <div class="p-6 rounded-2xl bg-[#16161a] border border-gray-800 hover:border-purple-500/50 transition-colors group">
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400">¿Funciona para mi Salón de Belleza?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Totalmente. El sistema permite configurar servicios de barbería, estilismo, uñas y más. Es una herramienta versátil para cualquier negocio de cuidado personal.
-                    </p>
-                </div>
-
-                <div class="p-6 rounded-2xl bg-[#16161a] border border-gray-800 hover:border-purple-500/50 transition-colors group">
-                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-purple-400">¿Qué pasa si tengo dudas técnicas?</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Cuentas con soporte directo de <strong>Hesed Core</strong> vía WhatsApp. Como ingenieros, garantizamos que tu sistema esté siempre operativo.
-                    </p>
                 </div>
             </div>
         </div>
@@ -162,31 +94,41 @@ import Pricing from '../components/Pricing.astro';
                 </h3>
                 <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em] mt-2">Engineering with Purpose</p>
             </div>
-            
-            <div class="space-y-3">
-                <p class="text-gray-500 text-xs">
-                    &copy; 2026 TrimmOS. Todos los derechos reservados.
-                </p>
-                <p class="text-gray-400 text-[11px] leading-relaxed">
-                    Diseñado y desarrollado en <span class="text-white">García, NL</span> <br/> 
-                    por el equipo de <span class="text-purple-500 font-bold tracking-widest uppercase">Hesed Core</span>
-                </p>
-            </div>
+            <p class="text-gray-500 text-xs">
+                &copy; 2026 TrimmOS. Desarrollado con ⚡ en García, NL.
+            </p>
         </div>
     </footer>
 </Layout>
 
-<style is:global>
-    @keyframes blob-slow {
-        0% { transform: translate(0px, 0px) scale(1); }
-        33% { transform: translate(30px, -50px) scale(1.1); }
-        66% { transform: translate(-20px, 20px) scale(0.9); }
-        100% { transform: translate(0px, 0px) scale(1); }
+<script is:inline>
+    const phrases = [
+        "Identidad y Control Absoluto",
+        "Gestión Inteligente de Citas",
+        "Automatización de Staff",
+        "Reportes en Tiempo Real",
+        "Tu Marca, Tus Reglas"
+    ];
+    
+    let currentIndex = 0;
+    const textElement = document.getElementById('dynamic-text');
+
+    function changeText() {
+        if (!textElement) return;
+        
+        // Animación de salida
+        textElement.style.opacity = '0';
+        textElement.style.transform = 'translateY(10px)';
+
+        setTimeout(() => {
+            currentIndex = (currentIndex + 1) % phrases.length;
+            textElement.textContent = phrases[currentIndex];
+            
+            // Animación de entrada
+            textElement.style.opacity = '1';
+            textElement.style.transform = 'translateY(0)';
+        }, 500);
     }
-    .animate-blob-slow {
-        animation: blob-slow 10s infinite ease-in-out;
-    }
-    .animation-delay-4000 {
-        animation-delay: 4s;
-    }
-</style>
+
+    setInterval(changeText, 3500);
+</script>

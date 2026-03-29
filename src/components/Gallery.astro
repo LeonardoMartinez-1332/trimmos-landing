@@ -1,0 +1,96 @@
+---
+---
+<section id="demo" class="py-20 bg-[#0a0a0c] border-t border-gray-900 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center mb-16 relative z-10">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-5 italic tracking-tighter">
+                Explora el Núcleo de TrimmOS
+            </h2>
+            <p class="text-base text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                Diseño multiplataforma adaptado a la identidad de tu marca. Control total desde cualquier dispositivo.
+            </p>
+        </div>
+        
+        <!-- Contenedor del Swiper con ancho controlado para centrar todo -->
+        <div class="swiper mySwiper rounded-3xl pb-16 relative max-w-4xl mx-auto">
+            
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide flex flex-col items-center">
+                    <div class="p-2 bg-orange-500/10 border border-orange-500/20 rounded-[24px] shadow-xl inline-block">
+                        <img src="/barber-preview.png" alt="Modo Barber Shop" class="rounded-2xl w-full h-auto block" />
+                    </div>
+                    <h4 class="text-orange-500 font-bold text-center mt-6 text-lg tracking-wide uppercase">Modo Barber Shop</h4>
+                </div>
+                
+                <!-- Slide 2 -->
+                <div class="swiper-slide flex flex-col items-center">
+                    <div class="p-2 bg-blue-500/10 border border-blue-500/20 rounded-[24px] shadow-xl inline-block">
+                        <img src="/beauty-preview.png" alt="Modo Beauty & Spa" class="rounded-2xl w-full h-auto block" />
+                    </div>
+                    <h4 class="text-blue-400 font-bold text-center mt-6 text-lg tracking-wide uppercase">Modo Beauty & Spa</h4>
+                </div>
+            </div>
+            
+            <!-- Controles -->
+            <div class="swiper-pagination mt-10"></div>
+            <div class="swiper-button-next !text-purple-500 after:!text-2xl"></div>
+            <div class="swiper-button-prev !text-purple-500 after:!text-2xl"></div>
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<style>
+    :root {
+        --swiper-theme-color: #9333ea;
+        --swiper-pagination-bullet-inactive-color: #4b5563;
+        --swiper-navigation-size: 24px;
+    }
+    
+    .mySwiper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Ajuste para que las flechas no queden tan pegadas o volando fuera del margen */
+    .swiper-button-next { right: -10px; }
+    .swiper-button-prev { left: -10px; }
+
+    @media (max-width: 768px) {
+        .swiper-button-next, .swiper-button-prev { display: none; }
+    }
+</style>
+
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script is:inline>
+    new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        spaceBetween: 0, // Quitamos el espacio entre slides para evitar desplazamientos
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>

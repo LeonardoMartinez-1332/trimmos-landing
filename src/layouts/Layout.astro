@@ -1,5 +1,7 @@
 ---
 import "../styles/global.css";
+// 1. Importamos el componente de analíticas
+import Analytics from '@vercel/analytics/astro';
 ---
 
 <!doctype html>
@@ -12,5 +14,7 @@ import "../styles/global.css";
     </head>
     <body class="bg-[#0a0a0c] text-white selection:bg-purple-500/30">
         <slot />
+        <!-- 2. Colocamos el componente antes de cerrar el body -->
+        <Analytics />
     </body>
 </html>

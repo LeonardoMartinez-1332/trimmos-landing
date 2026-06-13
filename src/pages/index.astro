@@ -7,7 +7,7 @@ import Gallery from '../components/Gallery.astro';
 <Layout title="TrimmOS - El Núcleo Digital para tu Negocio">
     <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a 
-        href="https://wa.me/528126076947?text=Hola%20Leonardo!%20Vengo%20de%20la%20web%20y%20quiero%20mi%20mes%20gratis%20de%20TrimmOS%20para%20mi%20negocio" 
+        href="https://wa.me/528135731273?text=Hola%2C%20vengo%20de%20la%20p%C3%A1gina%20web.%20Quiero%20activar%20mi%20mes%20gratis%20de%20TrimmOS%20para%20mi%20negocio" 
         target="_blank" 
         class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_0_20px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform group"
     >
@@ -24,6 +24,11 @@ import Gallery from '../components/Gallery.astro';
         <div class="absolute -top-1/4 -left-1/4 w-[600px] h-[600px] bg-purple-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-20"></div>
         <div class="absolute -bottom-1/4 -right-1/4 w-[600px] h-[600px] bg-blue-600 rounded-full mix-blend-lighten filter blur-[120px] opacity-20"></div>
 
+        <!-- Logo de fondo del hero -->
+        <div class="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <img src="/trimmos-logo.png" alt="" class="w-3/4 md:w-1/2 opacity-20 md:opacity-10 object-contain mix-blend-screen filter blur-[0.5px]" />
+        </div>
+
         <div class="relative z-10 text-center px-4 max-w-5xl">
             <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter mb-6 italic text-white">
                 Trimm<span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">OS</span>
@@ -35,7 +40,7 @@ import Gallery from '../components/Gallery.astro';
                 </span>
             </h2>
             <p class="text-lg md:text-xl text-gray-400 mb-10 leading-relaxed max-w-3xl mx-auto">
-                No es solo una agenda. Es el motor multiplataforma que adapta su estilo a tu marca. <strong>Gestiona citas, staff y tu flujo operativo</strong> desde un solo lugar y hacia el siguiente nivel.
+                TrimmOS combina agenda inteligente, administración de staff, clientes y servicios con reportes completos y personalización de marca. <strong>Todo en un mismo sistema pensado para barberías y salones.</strong>
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -54,30 +59,38 @@ import Gallery from '../components/Gallery.astro';
 
     <!-- FEATURES SECTION -->
     <section id="features" class="py-20 bg-[#070709]">
-        <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12">
-            <div class="p-8 rounded-3xl bg-gradient-to-br from-[#16161a] to-[#0a0a0c] border border-gray-800 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6">
-                        <span class="text-2xl">📸</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Catálogo Visual Pro</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Próximamente: Podrás mostrar tu arte antes de la cita. Sube tus degradados y peinados para que tus clientes elijan su estilo ideal.
-                    </p>
-                    <span class="inline-block mt-4 text-xs font-bold text-purple-400 uppercase tracking-widest">En Desarrollo</span>
-                </div>
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-4 italic tracking-tighter">Lo que trae TrimmOS</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                    Un sistema completo para tu barbería o salón con agenda, equipo, clientes, ventas y branding desde el primer día.
+                </p>
             </div>
 
-            <div class="p-8 rounded-3xl bg-gradient-to-br from-[#16161a] to-[#0a0a0c] border border-gray-800 relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6">
-                        <span class="text-2xl">🛍️</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-white">Punto de Venta Integrado</h3>
-                    <p class="text-gray-400 leading-relaxed text-sm">
-                        Próximamente: Control de stock de ceras, aceites y productos. Un inventario inteligente que te avisará cuando necesites resurtir.
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                <div class="p-8 rounded-3xl bg-[#16161a] border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Panel administrativo diario</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Supervisa tu operación diaria con métricas clave, control rápido y una vista clara de lo más importante.
                     </p>
-                    <span class="inline-block mt-4 text-xs font-bold text-pink-400 uppercase tracking-widest">Próximamente</span>
+                </div>
+                <div class="p-8 rounded-3xl bg-[#16161a] border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Gestión de staff</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Coordina turnos, horarios y personal fácilmente para que tu equipo trabaje sincronizado y sin confusiones.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl bg-[#16161a] border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Agenda inteligente</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Reserva, reprograma y controla citas con una agenda diseñada para el ritmo real de barberías y salones.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl bg-[#16161a] border border-gray-800">
+                    <h3 class="text-2xl font-bold mb-4 text-white">Reportes y personalización</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Extrae reportes diarios, semanales, mensuales y anuales en PDF o Excel, y personaliza logo y colores para tus clientes.
+                    </p>
                 </div>
             </div>
         </div>
@@ -88,11 +101,36 @@ import Gallery from '../components/Gallery.astro';
     <!-- FOOTER -->
     <footer class="py-16 border-t border-gray-900 bg-[#070709] text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <div class="mb-8">
-                <h3 class="text-2xl font-black text-white tracking-[0.15em] italic uppercase">
-                    HESED<span class="text-purple-600">CORE</span>
-                </h3>
+            <div class="mb-8 flex flex-col items-center gap-4">
+                <div class="flex items-center justify-center gap-3">
+                    <div class="w-14 h-14 rounded-full overflow-hidden bg-[#070709] border border-white/10 flex items-center justify-center shadow-[0_0_24px_rgba(0,0,0,0.35)]">
+                        <img src="/logoHC.jpng.png" alt="Hesed Core" class="w-full h-full object-contain rounded-full" />
+                    </div>
+                    <h3 class="text-2xl font-black text-white tracking-[0.15em] italic uppercase">
+                        HESED<span class="text-purple-600">CORE</span>
+                    </h3>
+                </div>
                 <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em] mt-2">Engineering with Purpose</p>
+            </div>
+            <div class="mb-8 flex flex-col items-center gap-3">
+                <p class="text-gray-400 text-sm uppercase tracking-[0.2em]">Síguenos en</p>
+                <div class="flex items-center justify-center gap-3">
+                    <a href="https://www.facebook.com/hesedcore" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Facebook">
+                        <img src="/facebook.png?v=2" alt="Facebook" class="w-5 h-5 object-contain" />
+                    </a>
+                    <a href="https://www.instagram.com/hesedcore?igsh=Nmluc2JmcWlzaW8%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="Instagram">
+                        <img src="/instagram.png?v=2" alt="Instagram" class="w-5 h-5 object-contain" />
+                    </a>
+                    <a href="https://x.com/hesedcore?s=11" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="X">
+                        <img src="/gorjeo.png?v=2" alt="X" class="w-5 h-5 object-contain" />
+                    </a>
+                    <a href="https://www.tiktok.com/@hesed.core?_r=1&_t=ZS-9785JRMXyzd" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="TikTok">
+                        <img src="/tik-tok.png?v=2" alt="TikTok" class="w-5 h-5 object-contain" />
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="YouTube">
+                        <img src="/youtube.png?v=2" alt="YouTube" class="w-5 h-5 object-contain" />
+                    </a>
+                </div>
             </div>
             <p class="text-gray-500 text-xs">
                 &copy; 2026 TrimmOS. Desarrollado con ⚡ en García, NL.

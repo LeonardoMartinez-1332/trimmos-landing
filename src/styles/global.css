@@ -1,1 +1,22 @@
 @import "tailwindcss";
+/* ===========================
+   Animación flotante de Core
+=========================== */
+
+@keyframes floatCore {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-core {
+  animation: floatCore 4s ease-in-out infinite;
+}

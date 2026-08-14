@@ -45,10 +45,66 @@ import CoreSection from '../components/CoreSection.astro';
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a href="#pricing" class="bg-purple-600 hover:bg-purple-700 text-white px-10 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(147,51,234,0.3)]">
-                    Empezar mi Mes Gratis
-                </a>
-                <a href="#demo" class="bg-[#16161a] border border-gray-800 hover:border-gray-600 text-white px-10 py-4 rounded-2xl font-bold transition-all">
+                <div class="relative group">
+
+                  <!-- Core y su globo de diálogo -->
+                    <div
+                        class="pointer-events-none absolute -left-20 top-1/2 z-30
+                            -translate-y-1/2 translate-x-5 scale-90 opacity-0
+                            transition-all duration-300 ease-out
+                            group-hover:translate-x-0
+                            group-hover:scale-100
+                            group-hover:opacity-100"
+                    >
+                        <!-- Globo colocado respecto a Core -->
+                        <div
+                            class="absolute bottom-full left-0 mb-2
+                                whitespace-nowrap rounded-xl
+                                border border-purple-500/70
+                                bg-[#1a1a1f]
+                                px-3 py-2
+                                text-xs text-white
+                                shadow-[0_0_24px_rgba(147,51,234,0.25)]"
+                        >
+                            ¿Listo? Empecemos gratis.
+
+                            <!-- Punta del globo -->
+                            <span
+                                class="absolute -bottom-2 left-8
+                                    h-4 w-4 rotate-45
+                                    border-b border-r border-purple-500/70
+                                    bg-[#1a1a1f]"
+                            ></span>
+                        </div>
+
+                        <!-- Imagen de Core -->
+                        <img
+                            src="/core-mini.png"
+                            alt="Core invitando a comenzar gratis"
+                            class="w-28 h-auto object-contain"
+                        />
+                    </div> 
+
+                    <!-- Botón principal -->
+                    <a
+                        href="#pricing"
+                        class="relative z-20 block
+                            rounded-2xl bg-purple-600
+                            px-10 py-4
+                            font-bold text-white
+                            shadow-[0_0_20px_rgba(147,51,234,0.3)]
+                            transition-all duration-300
+                            hover:scale-105 hover:bg-purple-700"
+                    >
+                        Empezar mi Mes Gratis
+                    </a>
+
+                </div>
+
+                <a
+                    href="#demo"
+                    class="bg-[#16161a] border border-gray-800 hover:border-gray-600 text-white px-10 py-4 rounded-2xl font-bold transition-all"
+                >
                     Ver Personalización
                 </a>
             </div>
@@ -82,7 +138,7 @@ import CoreSection from '../components/CoreSection.astro';
                     </p>
                 </div>
                 <div class="p-8 rounded-3xl bg-[#16161a] border border-gray-800">
-                    <h3 class="text-2xl font-bold mb-4 text-white">Agenda inteligente</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-white">Agenda digital</h3>
                     <p class="text-gray-400 text-sm leading-relaxed">
                         Reserva, reprograma y controla citas con una agenda diseñada para el ritmo real de barberías y salones.
                     </p>
